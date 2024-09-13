@@ -1,0 +1,102 @@
+/* Estilos globales */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Estilos para el contenedor principal */
+.roulette-container {
+  flex: 1;
+  width: 100%;
+  background: rgb(2,0,36);
+  background: linear-gradient(142deg, rgba(2,0,36,1) 0%, rgba(170,0,255,1) 29%, rgba(73,193,255,1) 47%, rgba(65,131,255,0.8239670868347339) 63%, rgba(255,0,108,1) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+/* Ruleta */
+.roulette {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+/* Botones */
+.buttons {
+  margin: 20px 0;
+}
+
+.btn {
+  background-color: #aa00ff;
+  border: none;
+  color: white;
+  padding: 15px 30px; /* Tamaño del botón aumentado */
+  font-size: 18px; /* Aumentar el tamaño de la fuente */
+  margin: 0 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #8400c9;
+}
+
+.btn:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Imágenes */
+.history {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.images-history {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.images-history img {
+  width: 120px; /* Tamaño reducido para las imágenes en la historia */
+  height: auto; /* Mantener la relación de aspecto */
+  margin: 5px;
+}
+
+.tombola-gif, .tombola-img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Texto de carta */
+p {
+  color: white;
+  margin-top: 10px;
+}
+
+/* Colores personalizados para botones */
+.btn-primary, .btn-secondary {
+  background-color: #c74fc7 !important;
+  border-color: #a64ca6 !important;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  background-color: #B088B0 !important;
+  border-color: #B088B0 !important;
+}
