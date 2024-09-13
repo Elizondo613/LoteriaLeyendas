@@ -11,7 +11,7 @@ const Roulette = () => {
   const [spinning, setSpinning] = useState(false);
   const [resultImage, setResultImage] = useState(null);
   const [history, setHistory] = useState([]);
-  const [remainingImages, setRemainingImages] = useState(54);  //Contador de imágenes restantes
+  const [remainingImages, setRemainingImages] = useState(61);  //Contador de imágenes restantes
   const audioTombola = new Audio(sonidoTombola);
 
   //Fetch de las imágenes desde la API
