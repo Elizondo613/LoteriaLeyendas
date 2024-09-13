@@ -4,6 +4,8 @@ import tombola from '../assets/img/tombola.png';
 import '../styles/Roulette.css';
 import sonidoTombola from '../audio/tombola_sonido.mp3';
 
+const API_URL = process.env.REACT_APP_API_URL || 'https://api-p.onrender.com';
+
 const Roulette = () => {
   const [images, setImages] = useState([]);
   const [spinning, setSpinning] = useState(false);
@@ -16,9 +18,9 @@ const Roulette = () => {
   useEffect(() => {
     const fetchImages = async () => {
       try {
-        const response = await fetch('http://localhost:3001/api/images');
+        const response = await fetch(`${API_URL}/api/images`);
         const data = await response.json();
-        setImages(data.map(img => `http://localhost:3001${img.path}`));
+        setImages(data.map(img => `${API_URL}${img.path}`));
       } catch (error) {
         console.error('Error fetching images:', error);
       }
