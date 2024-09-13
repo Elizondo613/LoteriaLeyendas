@@ -33,6 +33,20 @@ body, html {
 .roulette {
   margin-bottom: 20px;
   position: relative;
+  width: 600px;
+  height: 600px; 
+  max-width: 90%; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.roulette img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* Mantiene la relación de aspecto de la imagen */
+  padding: 15px;
 }
 
 /* Botones */
@@ -44,8 +58,8 @@ body, html {
   background-color: #aa00ff;
   border: none;
   color: white;
-  padding: 15px 30px; /* Tamaño del botón aumentado */
-  font-size: 18px; /* Aumentar el tamaño de la fuente */
+  padding: 15px 30px;
+  font-size: 18px;
   margin: 0 10px;
   cursor: pointer;
   transition: background-color 0.3s ease;
@@ -60,7 +74,7 @@ body, html {
   cursor: not-allowed;
 }
 
-/* Imágenes */
+/* Imágenes del historial */
 .history {
   text-align: center;
   margin-top: 20px;
@@ -74,14 +88,16 @@ body, html {
 }
 
 .images-history img {
-  width: 120px; /* Tamaño reducido para las imágenes en la historia */
-  height: auto; /* Mantener la relación de aspecto */
+  width: 100px; 
+  height: auto;
   margin: 5px;
 }
 
+/* Estilos específicos para las imágenes de la ruleta */
 .tombola-gif, .tombola-img {
   max-width: 100%;
-  height: auto;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 /* Texto de carta */
@@ -99,4 +115,38 @@ p {
 .btn-primary:hover, .btn-secondary:hover {
   background-color: #B088B0 !important;
   border-color: #B088B0 !important;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .roulette {
+    width: 450px;
+    height: 450px;
+  }
+  
+  .btn {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+  
+  .images-history img {
+    width: 80px;
+  }
+}
+
+/* Media query para pantallas muy pequeñas */
+@media (max-width: 360px) {
+  .roulette {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+  
+  .images-history img {
+    width: 60px;
+  }
 }
